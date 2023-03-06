@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>Calculadora de investimentos pessoal</title>
+
+        <link rel="stylesheet" href="style.css" />
+
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins&display=swap"
+            rel="stylesheet"
+        />
+
+        <link
+            rel="shortcut icon"
+            href="./assets/icons8-contabilidade-de-fundo-48.png"
+            type="image/x-icon"
+        />
+
+        <script src="./script.js" defer></script>
+    </head>
+    <body>
+        <div class="page">
+            <div class="screen1">
+                <header>
+                    <h1>Calculadora de investimentos</h1>
+                </header>
+                <main class="container">
+                    <form class="form" action="">
+                        <div class="type-investment">
+                            <p>Tipo de investimento</p>
+                            <div class="input-wrapper-ti">
+                                <input type="radio" id="typeofinvestment" />
+                                <label for="typeofinvestment"
+                                    >Tesouro direto</label
+                                >
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="input-wrapper">
+                                <label for="event-initial-investment"
+                                    >Investimento inicial</label
+                                >
+                                <div class="input">
+                                    <span>R$</span>
+                                    <input
+                                        type="text"
+                                        id="event-initial-investment"
+                                        placeholder="0,00"
+                                    />
+                                </div>
+                            </div>
+                            <div class="input-wrapper">
+                                <label for="event-monthly-investment"
+                                    >Investimento mensal</label
+                                >
+                                <div class="input">
+                                    <span>R$</span>
+                                    <input
+                                        type="number"
+                                        id="event-monthly-investment"
+                                        placeholder="0,00"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="input-wrapper term">
+                                <label for="event-term">Prazo</label>
+                                <div class="input">
+                                    <input
+                                        type="number"
+                                        id="event-term"
+                                        placeholder="0"
+                                    />
+                                    <select
+                                        name="event-term"
+                                        id="event-select-term"
+                                    >
+                                        <option value="years">Anos</option>
+                                        <option value="months">Meses</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="input-wrapper return">
+                                <label for="event-return-investment"
+                                    >Rentabilidade anual</label
+                                >
+                                <div class="input">
+                                    <span>%</span>
+                                    <input
+                                        type="number"
+                                        id="event-return-investment"
+                                        placeholder="0,00"
+                                    /><!-- 
+                                    <select
+                                        name="event-return-investment"
+                                        id="event-select-return-investment"
+                                    >
+                                        <option value="years">Anual</option>
+                                        <option value="months">Mensal</option>
+                                    </select> -->
+                                </div>
+                            </div>
+                        </div>
+                        <button>Calcular</button>
+                    </form>
+                </main>
+            </div>
+        </div>
+        <div class="modal">
+            <button>
+                <img
+                    src="./assets/icons8-macos-close-32.png"
+                    alt="icone de fechar janela"
+                />
+            </button>
+            <div class="title">
+                <h2>Resultado do investimento</h2>
+            </div>
+            <div class="result-wrapper tt-bruto">
+                <p>Valor total bruto</p>
+                <span>R$156.793,95</span>
+            </div>
+            <div class="result-wrapper vt-investido">
+                <p>Valor investido</p>
+                <span>R$145.843,25</span>
+            </div>
+            <div class="result-wrapper juros">
+                <p>Valor de juros</p>
+                <span>R$17.367,89</span>
+            </div>
+            <div class="result-wrapper imposto">
+                <p>Imposto sobre rentabilidade</p>
+                <span>15%</span>
+            </div>
+        </div>
+    </body>
+</html>
